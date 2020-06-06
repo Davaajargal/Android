@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "509407912913",
+    "firebase_url": "https://mgljpndic.firebaseio.com",
+    "project_id": "mgljpndic",
+    "storage_bucket": "mgljpndic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509407912913:android:87d9b7021b5e1b5c75b6f0",
+        "android_client_info": {
+          "package_name": "mn.cyborg.mgljpndic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509407912913-8slj17nkiq34amufqiefpgka1jvphs6u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa49vSLf6IcyfNKcUnMg_bFi_TkFX3Fcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509407912913-8slj17nkiq34amufqiefpgka1jvphs6u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

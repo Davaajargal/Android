@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Ханз</string>
+    <string name="flash_cart">Cart</string>
+    <string name="flash_download">Татах</string>
+    <string-array name="types">
+
+        <item>Улс төр</item>
+        <item>Сайд нарын  зөвлөл</item>
+        <item>Төрийн сайд</item>
+        <item>УИХ, ШҮҮХ</item>
+        <item>УЛС ТӨРИЙН НАМУУД</item>
+        <item>ЭЗЭН ХААНЫ ГЭР БҮЛ</item>
+        <item>ОЛОН УЛС, ГАДААД ХАРИЛЦАА</item>
+        <item>ЭЛЧИН САЙДЫН ЯАМ</item>
+        <item>ОЛОН УЛСЫН ХОЛБОО</item>
+        <item>МЭРГЭЖЛИЙН　БАЙГУУЛЛАГУУД</item>
+        <item>ДЭЛХИЙН БАЙГУУЛЛАГУУД</item>
+        <item>ЭДИЙН ЗАСАГ</item>
+        <item>КОМПАНИЙН ЗОХИОН БАЙГУУЛАЛТ</item>
+        <item>САНХҮҮГИЙН 4 БАЙГУУЛЛАГА</item>
+        <item> ЗАСГИЙН ГАЗРЫН САНХҮҮГИЙН БАЙГУУЛЛАГА</item>
+        <item> 1-Р ЗЭРГИЙН ҮЙЛДВЭРҮҮД</item>
+        <item> 2-Р ЗЭРГИЙН ҮЙЛДВЭРҮҮД</item>
+        <item>АЖИЛ ХӨДӨЛМӨР</item>
+        <item>ЦЭРЭГ АРМИ</item>
+        <item> СТРАТЕГИЙН ЗЭВСЭГ</item>
+        <item>ЦЭРГИЙН ЗЭВСЭГ, ЗЭВСЭГЛЭЛИЙГ БУУРУУЛАХ</item>
+        <item>ШҮҮХ, ЦАГДАА, ГЭМТ ХЭРЭГ</item>
+        <item>БОЛОВСРОЛ, СУРГУУЛЬ</item>
+        <item>ШИНЖЛЭХ УХААНЫ САЛБАРУУД</item>
+        <item>ШИНЖЛЭХ УХААН, ТЕХНОЛОГИ</item>
+        <item>БАЙГАЛИЙН ГАМШИГ, БОХИРДОЛ</item>
+        <item>СОЁЛ УРЛАГ</item>
+        <item>НИЙГЭМ, ХАНГАМЖ</item>
+        <item>ҮНДЭСНИЙ БАЯРЫН ӨДРҮҮД</item>
+        <item>ТАТВАР</item>
+        <item>СПОРТ,АЯЛАЛ</item>
+        <item>СПОРТЫН ТӨРЛҮҮД</item>
+        <item>СҮМОГИЙН ЦОЛУУД</item>
+        <item>ТЭЭВЭР ХЭВЛЭЛ МЭДЭЭЛЭЛ</item>
+        <item>ЭРҮҮЛ МЭНД, ЭРҮҮЛ АХУЙ</item>
+        <item>Миннано нихонго</item>
+    </string-array>
+
+</resources>

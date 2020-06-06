@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="maincard">120dp</dimen>
+    <dimen name="marg">5dp</dimen>
+    <dimen name="cardelev">10dp</dimen>
+    <dimen name="rad">5dp</dimen>
+    <dimen name="size">15dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
