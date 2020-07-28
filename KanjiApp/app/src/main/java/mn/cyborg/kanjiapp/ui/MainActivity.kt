@@ -21,12 +21,16 @@ import mn.cyborg.kanjiapp.model.Kanji
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import rx.android.schedulers.AndroidSchedulers
+import rx.schedulers.Schedulers
+import rx.subscriptions.CompositeSubscription
 
 class MainActivity : AppCompatActivity() {
 
     // private val TAG = "MainActivity"
     private lateinit var mAdView: AdView
     private var mDb: AppDatabase? = null
+    private val compositeSubscription = CompositeSubscription()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +59,10 @@ class MainActivity : AppCompatActivity() {
 
         swiperefresh.setOnRefreshListener {
             getData()
+        }
+
+        game_card.setOnClickListener {
+
         }
 
         seach_card.setOnClickListener {
@@ -123,6 +131,7 @@ class MainActivity : AppCompatActivity() {
 
     public override fun onDestroy() {
         mAdView.destroy()
+        compositeSubscription.clear()
         super.onDestroy()
     }
 
@@ -130,22 +139,62 @@ class MainActivity : AppCompatActivity() {
 
         // Log.e("SplashScreenActivity", "last id : $lastID")
         swiperefresh.isRefreshing = true
-        val call: Call<List<Kanji>> = ApiClient.getClient.getPhotos(0)
-        call.enqueue(object : Callback<List<Kanji>> {
 
-            override fun onResponse(call: Call<List<Kanji>>?, response: Response<List<Kanji>>?) {
+        compositeSubscription.clear()
+        compositeSubscription.add(
+            ApiClient.apiClient.getPhotos(0)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnNext {
                 mDb?.kanjiDao()?.resetKanji()
-                mDb?.kanjiDao()?.insertKanjis(response!!.body()!!)
-                Toast.makeText(applicationContext, "Өгөгдлийг шинэчилж дууслаа!!!", Toast.LENGTH_SHORT).show()
-                swiperefresh.isRefreshing = false
-            }
+                mDb?.kanjiDao()?.insertKanjis(it)
 
-            override fun onFailure(call: Call<List<Kanji>>?, t: Throwable?) {
-                t?.printStackTrace()
-                Toast.makeText(applicationContext, "Өгөгдлийг шинэчлэхэд алдаа гарлаа!!!", Toast.LENGTH_SHORT).show()
-            }
+                }
+                .doOnError {
+                Toast.makeText(
+                    applicationContext,
+                    "Өгөгдлийг шинэчлэхэд алдаа гарлаа!!!",
+                    Toast.LENGTH_SHORT
+                ).show()
+                }
+                .doOnCompleted {
 
-        })
+                    Toast.makeText(
+                        applicationContext,
+                        "Өгөгдлийг шинэчилж дууслаа!!!",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    swiperefresh.isRefreshing = false
+
+                }
+                .subscribe())
+
+
+
+//        val call: Call<List<Kanji>> = ApiClient.getClient.getPhotos(0)
+//        call.enqueue(object : Callback<List<Kanji>> {
+//
+//            override fun onResponse(call: Call<List<Kanji>>?, response: Response<List<Kanji>>?) {
+//                mDb?.kanjiDao()?.resetKanji()
+//                mDb?.kanjiDao()?.insertKanjis(response!!.body()!!)
+//                Toast.makeText(
+//                    applicationContext,
+//                    "Өгөгдлийг шинэчилж дууслаа!!!",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//                swiperefresh.isRefreshing = false
+//            }
+//
+//            override fun onFailure(call: Call<List<Kanji>>?, t: Throwable?) {
+//                t?.printStackTrace()
+//                Toast.makeText(
+//                    applicationContext,
+//                    "Өгөгдлийг шинэчлэхэд алдаа гарлаа!!!",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//            }
+//
+//        })
     }
 
 }

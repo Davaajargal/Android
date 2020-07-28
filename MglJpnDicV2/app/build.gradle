@@ -13,8 +13,8 @@ android {
         applicationId "mn.cyborg.mgljpndic"
         minSdkVersion 18
         targetSdkVersion 29
-        versionCode 7
-        versionName "1.0.7"
+        versionCode 8
+        versionName "1.0.8"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -51,7 +51,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.2.2'
     implementation 'com.google.firebase:firebase-firestore:21.4.3'
     implementation 'com.android.support:multidex:1.0.3'
-    implementation 'com.github.patgdut:RadioRealButton:v2.1.2'
+    // implementation 'com.github.patgdut:RadioRealButton:v2.1.2'
 
     // Room components
     implementation "androidx.room:room-runtime:2.2.5"

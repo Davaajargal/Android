@@ -46,7 +46,6 @@ class WordDetialActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         actionbar!!.title = "Дэлгэрэнгүй"
         //set back button
         actionbar.setDisplayHomeAsUpEnabled(true)
-        actionbar.setDisplayHomeAsUpEnabled(true)
 
         // HomeFragment
 

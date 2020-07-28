@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
 
-    var BASE_URL: String = "https://ekv.mn/mgljpndic/public/"
+    var BASE_URL: String = "https://www.api.zulzagateam.com/"
     val getClient: ApiInterface
         get() {
 

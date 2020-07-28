@@ -5,10 +5,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -65,15 +68,18 @@ class HomeFragment : Fragment(), WordViewHolder.ItemClickListener {
         })
 
 //        val sortBtn = root.findViewById(R.id.sortbtn) as ImageButton
-//        val kanjiBtn = root.findViewById(R.id.kanjibtn) as ImageButton
+        val kanjiBtn = root.findViewById(R.id.kanjibtn) as ImageButton
 
 //        sortBtn.setOnClickListener {
 //            onClearClicked()
 //        }
 //
-//        kanjiBtn.setOnClickListener {
-//            onDetectClicked()
-//        }
+        kanjiBtn.setOnClickListener {
+           //  onDetectClicked()
+
+            Toast.makeText(activity, "Coming soon", Toast.LENGTH_SHORT).show()
+
+        }
 
         return root
     }
@@ -108,10 +114,13 @@ class HomeFragment : Fragment(), WordViewHolder.ItemClickListener {
     }
 
     override fun onItemClick(view: View, position: Int) {
-        word = wordsList[position]
-        val intent = Intent(activity, WordDetialActivity::class.java)
-        intent.putExtra("wordId", word?.id)
-        startActivity(intent)
+//        word = wordsList[position]
+//        val intent = Intent(activity, WordDetialActivity::class.java)
+//        intent.putExtra("wordId", word?.id)
+//        startActivity(intent)
+
+        Log.e(TAG, "bram");
+
     }
 
 }

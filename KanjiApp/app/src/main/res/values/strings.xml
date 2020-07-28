@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Ханз</string>
     <string name="flash_cart">Cart</string>
-    <string name="flash_download">Татах</string>
+    <string name="download">Өгөгдөл шинэчлэх</string>
+    <string name="settings">Тохиргоо</string>
+    <string name="about">Тухай</string>
     <string-array name="types">
 
         <item>Улс төр</item>

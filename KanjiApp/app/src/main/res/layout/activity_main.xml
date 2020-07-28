@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swiperefresh"
         android:layout_width="match_parent"
-        android:layout_above="@+id/adView"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -17,7 +18,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="250dp"
+                android:layout_marginBottom="190dp"
                 android:background="@color/colorPrimary">
 
                 <TextView
@@ -25,10 +26,29 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="35dp"
+                    android:fontFamily="@font/mogul_avanti_bold"
                     android:gravity="center"
                     android:text="蒙古\nモンゴル"
                     android:textColor="#FFF"
                     android:textSize="40sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:hint="Хайлт"
+                    android:fontFamily="@font/mogul_avanti"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/custom_et"
+                    android:layout_marginBottom="120dp"
+                    android:layout_height="40dp"/>
 
             </RelativeLayout>
 
@@ -58,6 +78,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="30dp"
+                            android:fontFamily="@font/mogul_avanti_bold"
                             android:text="N5"
                             android:textColor="#000"
                             android:textSize="30sp" />
@@ -68,6 +89,7 @@
                             android:layout_below="@+id/txtn5"
                             android:layout_centerInParent="true"
                             android:layout_marginTop="5dp"
+                            android:fontFamily="@font/mogul_avanti"
                             android:text="80н ханз" />
 
                     </RelativeLayout>
@@ -91,6 +113,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="30dp"
+                            android:fontFamily="@font/mogul_avanti_bold"
                             android:text="N4"
                             android:textColor="#000"
                             android:textSize="30sp" />
@@ -101,6 +124,7 @@
                             android:layout_below="@+id/txtn4"
                             android:layout_centerInParent="true"
                             android:layout_marginTop="5dp"
+                            android:fontFamily="@font/mogul_avanti"
                             android:text="165н ханз" />
 
                     </RelativeLayout>
@@ -124,6 +148,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="30dp"
+                            android:fontFamily="@font/mogul_avanti_bold"
                             android:text="N3"
                             android:textColor="#000"
                             android:textSize="30sp" />
@@ -134,6 +159,7 @@
                             android:layout_below="@+id/txtn3"
                             android:layout_centerInParent="true"
                             android:layout_marginTop="5dp"
+                            android:fontFamily="@font/mogul_avanti"
                             android:text="367н ханз" />
 
                     </RelativeLayout>
@@ -147,11 +173,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/lin3"
+                android:layout_alignParentBottom="true"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:orientation="horizontal">
-
-
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/n2_card"
@@ -170,6 +195,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="30dp"
+                            android:fontFamily="@font/mogul_avanti_bold"
                             android:text="N2"
                             android:textColor="#000"
                             android:textSize="30sp" />
@@ -180,6 +206,7 @@
                             android:layout_below="@+id/txtn2"
                             android:layout_centerInParent="true"
                             android:layout_marginTop="5dp"
+                            android:fontFamily="@font/mogul_avanti"
                             android:text="368н ханз" />
 
                     </RelativeLayout>
@@ -203,6 +230,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="30dp"
+                            android:fontFamily="@font/mogul_avanti_bold"
                             android:text="N1"
                             android:textColor="#000"
                             android:textSize="30sp" />
@@ -213,44 +241,8 @@
                             android:layout_below="@+id/txtn1"
                             android:layout_centerInParent="true"
                             android:layout_marginTop="5dp"
+                            android:fontFamily="@font/mogul_avanti"
                             android:text="1262н ханз" />
-
-                    </RelativeLayout>
-
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lin3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="5dp"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/about_card"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/maincard"
-                    android:layout_margin="@dimen/marg"
-                    android:layout_weight="1">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/txtabout"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_centerHorizontal="true"
-                            android:text="Тухай"
-                            android:textColor="#000"
-                            android:textSize="20sp" />
 
                     </RelativeLayout>
 
@@ -273,13 +265,57 @@
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:layout_centerHorizontal="true"
-                            android:text="Тоглоом"
+                            android:fontFamily="@font/mogul_avanti_bold"
+                            android:gravity="center"
+                            android:text="Таньд"
                             android:textColor="#000"
                             android:textSize="20sp" />
 
                     </RelativeLayout>
 
                 </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/about_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/maincard"
+                    android:layout_margin="@dimen/marg"
+                    android:visibility="gone"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtabout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/mogul_avanti_bold"
+                            android:text="Тухай"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/seach_card"
@@ -298,6 +334,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/mogul_avanti_bold"
                             android:text="Хайлт"
                             android:textColor="#000"
                             android:textSize="20sp" />
@@ -330,6 +367,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        tools:ignore="RelativeOverlap" />
 
 </RelativeLayout>

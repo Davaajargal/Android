@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import mn.cyborg.kanjiapp.R
 import mn.cyborg.kanjiapp.model.Word
+import mn.cyborg.kanjiapp.viewholder.WordViewHolder
 
 
 class WordAdapter(

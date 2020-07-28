@@ -8,7 +8,7 @@ import mn.cyborg.kanjiapp.R
 import mn.cyborg.kanjiapp.model.Kanji
 
 class KanjiSearchAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private var listOfMovies = listOf<Kanji>()
+    private var itemList = listOf<Kanji>()
     private var context = context;
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return MovieListViewHolder(
@@ -16,16 +16,17 @@ class KanjiSearchAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.V
         )
     }
 
-    override fun getItemCount(): Int = listOfMovies.size
+    override fun getItemCount(): Int = itemList.size
 
     override fun onBindViewHolder(viewHolder: RecyclerView.ViewHolder, position: Int) {
         val movieViewHolder = viewHolder as MovieListViewHolder
-        movieViewHolder.bindView(context, listOfMovies[position])
+        movieViewHolder.bindView(context, itemList[position])
 
     }
 
     fun setMovieList(listOfMovies: List<Kanji>) {
-        this.listOfMovies = listOfMovies
+        itemList = listOfMovies
         notifyDataSetChanged()
     }
+
 }

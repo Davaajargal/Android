@@ -7,7 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import co.ceryle.radiorealbutton.RadioRealButtonGroup
+//import co.ceryle.radiorealbutton.RadioRealButtonGroup
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_new_word.*
 import mn.cyborg.mgljpndic.R
@@ -23,8 +23,8 @@ class NewWordActivity : AppCompatActivity() {
 
     private var TAG = "NewWordActivity"
     private var db = FirebaseFirestore.getInstance()
-    private var typeRb: RadioRealButtonGroup? = null
-    private var lvlRb: RadioRealButtonGroup? = null
+//    private var typeRb: RadioRealButtonGroup? = null
+//    private var lvlRb: RadioRealButtonGroup? = null
 
     private var typeTitlTxt: String? = null
     private var typeTxt: String? = null
@@ -36,8 +36,8 @@ class NewWordActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_new_word)
 
-        typeRb = findViewById<View>(R.id.type_radio_btn) as RadioRealButtonGroup
-        lvlRb = findViewById<View>(R.id.lvl_rbtn) as RadioRealButtonGroup
+//        typeRb = findViewById<View>(R.id.type_radio_btn) as RadioRealButtonGroup
+//        lvlRb = findViewById<View>(R.id.lvl_rbtn) as RadioRealButtonGroup
 
         //actionbar
         val actionbar = supportActionBar
@@ -51,18 +51,20 @@ class NewWordActivity : AppCompatActivity() {
         progerssProgressDialog.setTitle("Loading")
         progerssProgressDialog.setCancelable(false)
 
-        typeRb?.setOnClickedButtonListener { button, position ->
-            typeTxt = position.toString()
-            typeTitlTxt = button.text
-        }
-
-        lvlRb?.setOnClickedButtonListener { _, position ->
-            lvlTxt = position.toString()
-        }
+//        typeRb?.setOnClickedButtonListener { button, position ->
+//            typeTxt = position.toString()
+//            typeTitlTxt = button.text
+//        }
+//
+//        lvlRb?.setOnClickedButtonListener { _, position ->
+//            lvlTxt = position.toString()
+//        }
 
         save_btn.setOnClickListener {
 
-            insertForFile()
+           //  insertForFile()
+
+            userForInsert()
 
         }
     }

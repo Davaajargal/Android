@@ -4,7 +4,17 @@
 
     <item
         android:id="@+id/action_cart"
-        android:title="@string/flash_download"
-        app:showAsAction="ifRoom"/>
+        android:title="@string/download"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_cart1"
+        android:title="@string/settings"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/about"
+        app:showAsAction="never"/>
 
 </menu>

@@ -14,6 +14,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/mogul_avanti"
             android:text="Ханз"
             android:textColor="#000"
             android:textSize="14sp" />
@@ -25,6 +26,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="25dp"
+            android:fontFamily="@font/mogul_avanti"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp" />
 
@@ -34,6 +36,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/mogul_avanti"
             android:text="Хирагана"
             android:textColor="#000"
             android:textSize="14sp" />
@@ -45,6 +48,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="25dp"
+            android:fontFamily="@font/mogul_avanti"
             android:textColor="#000"
             android:textSize="18sp" />
 
@@ -54,6 +58,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/mogul_avanti"
             android:text="Орчуулга"
             android:textColor="#000"
             android:textSize="14sp" />
@@ -65,6 +70,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="25dp"
+            android:fontFamily="@font/mogul_avanti"
             android:textSize="14sp" />
 
         <TextView
@@ -73,6 +79,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/mogul_avanti"
             android:text="Япон хэлний түвшин"
             android:textColor="#000"
             android:textSize="14sp" />
@@ -83,7 +90,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="25dp" />
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/mogul_avanti" />
 
         <TextView
             android:layout_width="match_parent"
@@ -91,6 +99,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/mogul_avanti"
             android:text="Үгийн төрөл"
             android:textColor="#000"
             android:textSize="14sp" />
@@ -101,7 +110,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="25dp" />
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/mogul_avanti" />
 
         <TextView
             android:layout_width="match_parent"
@@ -109,6 +119,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/mogul_avanti"
             android:text="Англи орчуулга"
             android:textColor="#000"
             android:textSize="14sp" />
@@ -119,7 +130,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="25dp" />
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/mogul_avanti" />
 
     </LinearLayout>
 
@@ -128,10 +140,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/adView"
-        android:visibility="gone"
         android:background="@color/colorPrimary"
+        android:fontFamily="@font/mogul_avanti"
         android:text="Хадгалах"
-        android:textColor="#FFF" />
+        android:textColor="#FFF"
+        android:visibility="gone" />
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
@@ -143,14 +156,17 @@
         ads:adUnitId="ca-app-pub-9271913142736812/1670973738" />
 
 
-    <Button
+    <ImageButton
         android:id="@+id/speackBtn"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_margin="25dp"
-        android:background="@color/colorPrimary"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/mogul_avanti"
+        android:scaleType="centerInside"
+        android:src="@mipmap/speak"
         android:textColor="#FFF" />
 
 </RelativeLayout>

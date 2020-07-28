@@ -15,10 +15,9 @@ import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.RequestConfiguration
 import kotlinx.android.synthetic.main.activity_kanji_detail.*
 import kotlinx.android.synthetic.main.activity_kanji_detail.speackBtn
-import kotlinx.android.synthetic.main.activity_word_detial.*
 import mn.cyborg.kanjiapp.R
 import mn.cyborg.kanjiapp.adapter.WordAdapter
-import mn.cyborg.kanjiapp.adapter.WordViewHolder
+import mn.cyborg.kanjiapp.viewholder.WordViewHolder
 import mn.cyborg.kanjiapp.database.AppDatabase
 import mn.cyborg.kanjiapp.model.Word
 import java.util.*

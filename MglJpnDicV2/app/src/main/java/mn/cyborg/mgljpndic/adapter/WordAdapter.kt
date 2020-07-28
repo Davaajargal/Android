@@ -1,6 +1,7 @@
 package mn.cyborg.mgljpndic.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.speech.tts.TextToSpeech
 import android.util.Log
@@ -10,6 +11,7 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import mn.cyborg.mgljpndic.R
 import mn.cyborg.mgljpndic.model.Word
+import mn.cyborg.mgljpndic.ui.WordDetialActivity
 import mn.cyborg.mgljpndic.viewholder.WordViewHolder
 import java.util.*
 
@@ -46,6 +48,15 @@ class WordAdapter(
             it.speechBtn.setOnClickListener {
                 tts.speak(word.kanji, TextToSpeech.QUEUE_FLUSH, null,"")
             }
+
+            it.mainRel.setOnClickListener {
+
+                val intent = Intent(context, WordDetialActivity::class.java)
+                intent.putExtra("wordId", word.id)
+                context.startActivity(intent)
+
+            }
+
         }
     }
 

@@ -15,6 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
+            android:fontFamily="@font/mogul_avanti"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
 
@@ -24,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginStart="5dp"
+            android:fontFamily="@font/mogul_avanti"
             android:layout_marginEnd="5dp"
             android:textColor="@color/colorPrimary"
             android:textStyle="bold" />
@@ -34,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
+        android:fontFamily="@font/mogul_avanti"
         android:paddingLeft="16dp" />
 
 </LinearLayout>

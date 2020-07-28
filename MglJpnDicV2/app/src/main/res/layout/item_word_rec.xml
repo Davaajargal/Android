@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
+    android:id="@+id/mainRel"
     android:orientation="vertical"
     android:padding="6dp">
 
@@ -16,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
+            android:fontFamily="@font/mogul_avanti"
             android:paddingLeft="16dp"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
@@ -27,6 +29,7 @@
             android:layout_gravity="left"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
+            android:fontFamily="@font/mogul_avanti"
             android:textColor="@color/colorPrimary"
             android:textStyle="bold" />
     </LinearLayout>
@@ -37,15 +40,21 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/lin"
         android:layout_gravity="left"
+        android:fontFamily="@font/mogul_avanti"
         android:paddingStart="16dp" />
 
-    <Button
+    <ImageButton
         android:id="@+id/speechBtn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:background="@color/colorPrimary" />
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/mogul_avanti"
+        android:padding="2dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/speak" />
 
 </RelativeLayout>
